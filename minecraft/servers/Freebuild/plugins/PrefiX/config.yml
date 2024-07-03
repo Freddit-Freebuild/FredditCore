@@ -22,9 +22,9 @@ suffix:
 general:
   hexadecimal:
     enabled: false
-    format: "{#rrggbb}"
+    format: "<#rrggbb>"
     gradient: true
-    hex-names: false
+    hex-names: true
 
   hide-warnings: false
   language: "en_US"

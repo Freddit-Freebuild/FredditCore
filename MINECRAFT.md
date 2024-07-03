@@ -6,9 +6,9 @@
 # Freebuild
 
 - Server port: `25565` (Minecraft default)
-- Minecraft version: `1.20.4`
-- Paper version: `1.20.4-409`
-- Hosted on: `Contabo VPS`
+- Minecraft version: `1.20.4` / `1.21` (Rebuild)
+- Paper version: `1.20.4-409` / `1.21-40` (Rebuild)
+- Hosted on: `Contabo VPS` / `Hetzner Dedicated Server` (Rebuild)
 
 ## Plugins
 

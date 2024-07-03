@@ -1,4 +1,3 @@
 *
 !.gitignore
-!LPC/
-!PrefiX/
+!config.yml

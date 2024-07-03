@@ -59,9 +59,7 @@ general:
   # Here you can specify any characters or words whose are blocked.
   # Blacklist is NOT Case Sensitive
   blacklist:
-    - "fuck"
-    - "admin"
-    - "owner"
+    - "sakega"
 
 #In this section you can define your own Prefix templates players can choose of
 templates:

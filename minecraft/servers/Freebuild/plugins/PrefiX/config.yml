@@ -21,7 +21,7 @@ suffix:
 
 general:
   hexadecimal:
-    enabled: false
+    enabled: true
     format: "<#rrggbb>"
     gradient: true
     hex-names: true

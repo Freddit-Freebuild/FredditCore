@@ -52,6 +52,7 @@ general:
     - "\\w" #Alphabetic characters
     - "\\p{Punct}" #Punctuation characters
     - " " #Spaces
+    - "⚛"
   #  - "\\p{IsHan}" #Chinese characters
   #  - "\\p{IsAlphabetic}" #Russian and other languages
   #  - "%@♡€" # Allow specific symbols

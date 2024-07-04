@@ -1,0 +1,70 @@
+# +---------------------------------------------------------------------------------------------------------+
+# Prefix is made by martijnpu
+# File generated in version v7.2
+# For the descriptions for each setting check the documentation:
+# https://hangar.papermc.io/martijnpu/PrefiX/pages/Documentation/Config
+# +---------------------------------------------------------------------------------------------------------+
+
+prefix:
+  max-length: 24
+  start-character: ""
+  end-character: " "
+
+  bracket:
+    enable: false
+    change-color: ""
+
+suffix:
+  max-length: 24
+  start-character: " "
+  end-character: ""
+
+general:
+  hexadecimal:
+    enabled: false
+    # Define here the hexadecimal format the other plugins are using ({#rrggbb}, &#rrggbb)
+    format: "{#rrggbb}"
+
+    # Enable gradient support. This will allow you to use <>. Please contact martijnpu if you need other ways
+    # With bracket functionality disabled the brackets will be included in the gradient
+    gradient: true
+
+    # Use hexadecimal color names
+    # Only enable if your chat/tab plugin supports this
+    hex-names: false
+
+  # Hide warning messages to normal players
+  # Console and players with prefix.admin will still always receive it
+  hide-warnings: false
+
+  # Define the language of the plugin.
+  # Currently available: "en_US" (English), "nl_NL" (Dutch), "uk_UA" (Ukrainian) and "ru" (Russian)
+  # Want to add your translation to PrefiX? Contact the developer
+  language: "en_US"
+
+  # Keep the current context of the tag
+  # This option needs LuckPerms version v5.4.xx at least to work
+  keep-context: false
+
+  # Define here the characters you want to allow
+  # Check for the full list: https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
+  whitelist:
+    - "\\w" #Alphabetic characters
+    - "\\p{Punct}" #Punctuation characters
+    - " " #Spaces
+  #  - "\\p{IsHan}" #Chinese characters
+  #  - "\\p{IsAlphabetic}" #Russian and other languages
+  #  - "%@♡€" # Allow specific symbols
+
+  # Here you can specify any characters or words whose are blocked.
+  # Blacklist is NOT Case Sensitive
+  blacklist:
+    - "sakega"
+
+#In this section you can define your own Prefix templates players can choose of
+templates:
+  enabled: false
+
+  #The name of the template is used as permission (prefix.template.<name>)
+  list:
+    example: "&a[&bTemplateExample&a] "

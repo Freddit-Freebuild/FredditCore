@@ -10,14 +10,15 @@ install:
 
 .PHONY: start
 start:
-	screen -S ${name} -d -m npm start
+	pm2 start bot.js --name ${name}
 
 .PHONY: stop
 stop:
-	screen -X -S ${name} quit
+	pm2 stop ${name}
 
 .PHONY: restart
-restart: stop start
+restart:
+	pm2 restart ${name}
 
 .PHONY: full-start
 full-start: lock install start

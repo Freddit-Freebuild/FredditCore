@@ -52,6 +52,7 @@ bot.on('ready', async () => {
 bot.on('messageCreate', (msg) => {
     if (msg.webhookId) return;
     if (msg.author.bot && !bot_whitelist.includes(msg.author.id)) return;
+    if (!(Object.keys(channels).includes(msg.channel.id))) return;
 
     logger.info(`<${msg.author.tag}> ` + msg.content)
 

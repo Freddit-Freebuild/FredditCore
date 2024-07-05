@@ -1,6 +1,3 @@
-include .env
-export
-
 name=worldlink
 
 .PHONY: lock

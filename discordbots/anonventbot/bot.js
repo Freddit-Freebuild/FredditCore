@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
  
-const anonventbot = new Discord.Client({ 
+const bot = new Discord.Client({ 
     intents: [
         Discord.GatewayIntentBits.MessageContent,
         Discord.GatewayIntentBits.DirectMessages
@@ -20,22 +20,22 @@ const color = '#0099ff';    // hex code of embed side colour
 const presence_text = '';   // presence status text
 let last_person = '';       // log last person to identify a new OP
 
-anonventbot.on('ready', async () => {
-    anonventbot.user.setPresence({ status: 'online', game: { name: presence_text }})
+bot.on('ready', async () => {
+    bot.user.setPresence({ status: 'online', game: { name: presence_text }})
 
     const [vent, vent_logs] = 
         [
-            await anonventbot.channels.fetch(vent_channel_id),
-            await anonventbot.channels.fetch(vent_logs_channel_id)
+            await bot.channels.fetch(vent_channel_id),
+            await bot.channels.fetch(vent_logs_channel_id)
         ]
 
     vent_channel = vent
     vent_logs_channel = vent_logs
 
-    console.log(`Logged in as ${anonventbot.user.username}`);
+    console.log(`Logged in as ${bot.user.username}`);
 });
  
-anonventbot.on('messageCreate', (msg) => {
+bot.on('messageCreate', (msg) => {
     if (msg.author.bot || msg.guild !== null) return;
     console.log(`[${msg.author.tag}]`, msg.content)
 
@@ -63,5 +63,5 @@ anonventbot.on('messageCreate', (msg) => {
     msg.react('☑');
 });
 
-anonventbot.login(process.env.DISCORD_BOT_TOKEN);
+bot.login(process.env.DISCORD_BOT_TOKEN);
  

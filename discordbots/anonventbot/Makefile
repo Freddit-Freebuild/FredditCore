@@ -1,6 +1,8 @@
 include .env
 export
 
+name=anonventbot
+
 .PHONY: lock
 lock:
 	npm i --package-lock-only
@@ -11,14 +13,15 @@ install:
 
 .PHONY: start
 start:
-	screen -S anonventbot -d -m npm start
+	pm2 start bot.js --name ${name}
 
 .PHONY: stop
 stop:
-	screen -X -S anonventbot quit
+	pm2 stop ${name}
 
 .PHONY: restart
-restart: stop start
+restart:
+	pm2 restart ${name}
 
 .PHONY: full-start
 full-start: lock install start

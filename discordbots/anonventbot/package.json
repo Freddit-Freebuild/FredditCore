@@ -1,10 +1,7 @@
 {
   "name": "anonventbot",
   "version": "2.0.0",
-  "scripts": {
-    "start": "node anon.js",
-    "stop": "node anon.js"
-  },
+  "private": true,
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",

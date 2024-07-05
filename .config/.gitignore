@@ -1,4 +1,5 @@
 *
 !.gitignore
+!.env
 !.env-minecraft.sample
 !.env-minecraft-Server.sample

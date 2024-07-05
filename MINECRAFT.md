@@ -60,28 +60,28 @@ When updating server plugins, make sure to note **A)** the latest version of the
 
 | Plugin name                                                    |  Minecraft |       Plugin version |          Notes          |
 |:-------------------------------------------------------------- | ----------:| --------------------:|:-----------------------:|
-| [ChestSort](https://www.spigotmc.org/resources/59773/)         |   `1.20.6` |             `14.1.0` |                         |
-| [CoreProtect](https://www.spigotmc.org/resources/8631/)        |   `1.20.6` |               `22.4` |                         |
-| [DiscordSRV](https://www.spigotmc.org/resources/18494/)        |   `1.20.6` |             `1.27.0` |                         |
+| [ChestSort](https://www.spigotmc.org/resources/59773/)         |   `1.20.6` |             `14.1.0` |      `1.21` support     |
+| [CoreProtect](https://www.spigotmc.org/resources/8631/)        |   `1.20.6` |               `22.4` |      `1.21` support     |
+| [DiscordSRV](https://www.spigotmc.org/resources/18494/)        |   `1.20.6` |             `1.27.0` |      `1.21` support     |
 | [EntitySize](https://www.spigotmc.org/resources/16497/)        |   `1.20.6` |                `1.2` |                         |
-| [EssentialsX](https://www.spigotmc.org/resources/9089/)        |   `1.20.6` |     `2.21.0-dev+102` |                         |
-| [EssentialsXChat](https://www.spigotmc.org/resources/9089/)    |   `1.20.6` |     `2.21.0-dev+102` |                         |
-| [EssentialsXProtect](https://www.spigotmc.org/resources/9089/) |   `1.20.6` |     `2.21.0-dev+102` |                         |
-| [EssentialsXSpawn](https://www.spigotmc.org/resources/9089/)   |   `1.20.6` |     `2.21.0-dev+102` |                         |
-| [GSit](https://www.spigotmc.org/resources/62325/)              |   `1.20.6` |              `1.9.5` |                         |
+| [EssentialsX](https://www.spigotmc.org/resources/9089/)        |   `1.20.6` |     `2.21.0-dev+102` |      `1.21` support     |
+| [EssentialsXChat](https://www.spigotmc.org/resources/9089/)    |   `1.20.6` |     `2.21.0-dev+102` |      `1.21` support     |
+| [EssentialsXProtect](https://www.spigotmc.org/resources/9089/) |   `1.20.6` |     `2.21.0-dev+102` |      `1.21` support     |
+| [EssentialsXSpawn](https://www.spigotmc.org/resources/9089/)   |   `1.20.6` |     `2.21.0-dev+102` |      `1.21` support     |
+| [GSit](https://www.spigotmc.org/resources/62325/)              |   `1.20.6` |              `1.9.5` |      `1.21` support     |
 | [Lasso](https://www.spigotmc.org/resources/54815/)             | ⚠️`1.20.4` |               `1.11` | no `1.20.6` support yet |
 | [LPC](https://www.spigotmc.org/resources/68965/)               |   `1.20.6` |              `3.6.0` |           (1)           |
-| [LuckPerms](https://www.spigotmc.org/resources/28140/)         |   `1.20.6` |            `5.4.131` |                         |
+| [LuckPerms](https://www.spigotmc.org/resources/28140/)         |   `1.20.6` |            `5.4.131` |      `1.21` support     |
 | [MineSpawners](https://www.spigotmc.org/resources/113429/)     |   `1.20.6` |                `1.8` |     works on `1.21`     |
-| [NoChatReports](https://www.spigotmc.org/resources/102931/)    |   `1.20.6` |              `1.0.5` |                         |
+| [NoChatReports](https://www.spigotmc.org/resources/102931/)    |   `1.20.6` |              `1.0.5` |      `1.21` support     |
 | [PlaceholderAPI](https://www.spigotmc.org/resources/6245/)     |   `1.20.6` |             `2.11.6` |           (2)           |
 | [Pl3xMap](https://modrinth.com/plugin/pl3xmap)                 |   `1.20.6` |         `1.20.6-499` |           (3)           |
-| [PrefiX](https://www.spigotmc.org/resources/70359/)            |   `1.20.6` |                `7.2` |                         |
-| [ProtocolLib](https://www.spigotmc.org/resources/1997/)        |   `1.20.6` | `5.3.0-SNAPSHOT-723` |                         |
-| [RHEasyCrops](https://www.spigotmc.org/resources/86956/)       |   `1.20.6` |            `1.20_R5` |                         |
-| [ShulkerPacks](https://www.spigotmc.org/resources/67466/)      |   `1.20.6` |              `1.6.4` |                         |
+| [PrefiX](https://www.spigotmc.org/resources/70359/)            |   `1.20.6` |                `7.2` |      `1.21` support     |
+| [ProtocolLib](https://www.spigotmc.org/resources/1997/)        |   `1.20.6` | `5.3.0-SNAPSHOT-723` |      `1.21` support     |
+| [RHEasyCrops](https://www.spigotmc.org/resources/86956/)       |   `1.20.6` |            `1.20_R5` |      `1.21` support     |
+| [ShulkerPacks](https://www.spigotmc.org/resources/67466/)      |   `1.20.6` |              `1.6.4` |      `1.21` support     |
 | [Stress](https://www.spigotmc.org/resources/79374/)            |   `1.20.6` |              `1.0.3` |                         |
-| [TAB](https://www.spigotmc.org/resources/57806/)               |   `1.20.6` |              `4.1.6` |                         |
+| [TAB](https://www.spigotmc.org/resources/57806/)               |   `1.20.6` |              `4.1.6` |      `1.21` support     |
 
 **(1)**: **LPC**: Luckperms Chat Formatting  
 **(2)**: **PlaceholderAPI**: If names show up as `%essentials_nickname%` in chat, make sure the Essentials placeholder addon is installed (`/papi ecloud download Essentials`)  

@@ -7,13 +7,6 @@ server_type := "paper"
 
 screen_name := "minecraft-server" + server_name
 
-mem_min := {{MEMORY_MIN}}
-mem_max := {{MEMORY_MAX}}
-discordsrv_token 	:= {{DISCORDSRV_TOKEN}}
-discordsrv_channel 	:= {{DISCORDSRV_CHANNEL}}
-discordsrv_console 	:= {{DISCORDSRV_CONSOLE_CHANNEL}}
-discordsrv_invite 	:= {{DISCORDSRV_INVITE_LINK}}
-
 wrong_server_type := @echo "${server_name} is not a ${server_type} server. Skipping."
 
 default:
@@ -39,10 +32,10 @@ copy-shared-plugins-folder:
 # Replace fields from the DiscordSRV config with values from .config/.env-minecraft
 fix-discordsrv-config:
     if server_type == "paper"; then
-        sed -i "s/BotToken: \".*/BotToken: \"${discordsrv_token}\"/" ./plugins/DiscordSRV/config.yml
-        sed -i "s/Channels: {\"global\": \".*/Channels: {\"global\": \"${discordsrv_channel}\"}/" ./plugins/DiscordSRV/config.yml
-        sed -i "s/DiscordConsoleChannelId: \".*/DiscordConsoleChannelId: \"${discordsrv_console}\"/" ./plugins/DiscordSRV/config.yml
-        sed -i "s@DiscordInviteLink: \".*@DiscordInviteLink: \"${discordsrv_inite}\"@" ./plugins/DiscordSRV/config.yml
+        sed -i "s/BotToken: \".*/BotToken: \"{{DISCORDSRV_TOKEN}}\"/" ./plugins/DiscordSRV/config.yml
+        sed -i "s/Channels: {\"global\": \".*/Channels: {\"global\": \"{{DISCORDSRV_CHANNEL}}\"}/" ./plugins/DiscordSRV/config.yml
+        sed -i "s/DiscordConsoleChannelId: \".*/DiscordConsoleChannelId: \"{{DISCORDSRV_CONSOLE}}\"/" ./plugins/DiscordSRV/config.yml
+        sed -i "s@DiscordInviteLink: \".*@DiscordInviteLink: \"{{DISCORDSRV_INVITE}}\"@" ./plugins/DiscordSRV/config.yml
     else
         {{wrong_server_type()}}
         @exit 1
@@ -61,9 +54,9 @@ backup:
 
 # Start the Minecraft server in a screen session.
 start:
-    screen -S ${screen_name} -d -m \
-        bash ./start.sh ${server_name} ${mem_min} ${mem_max} true
-        @echo "Starting ${server_name}"
+    screen -S {{screen_name}} -d -m \
+        bash ./start.sh {{server_name} {{MEM_MIN}}} {{MEM_MAX}} true
+        @echo "Starting {{server_name}}"
 
 # Stop the Minecraft server's screen session
 stop:

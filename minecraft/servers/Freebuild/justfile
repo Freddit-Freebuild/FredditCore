@@ -7,8 +7,6 @@ server_type := "paper"
 
 screen_name := "minecraft-server" + server_name
 
-wrong_server_type := @echo "${server_name} is not a ${server_type} server. Skipping."
-
 default:
     @just --list
 
@@ -25,7 +23,7 @@ copy-shared-plugins-folder:
     if server_type == "paper"; then
         cp -rv ../shared/plugins .
     else
-        {{wrong_server_type()}}
+        @echo "Incorrect server type"
         @exit 1
     fi
 
@@ -37,7 +35,7 @@ fix-discordsrv-config:
         sed -i "s/DiscordConsoleChannelId: \".*/DiscordConsoleChannelId: \"{{DISCORDSRV_CONSOLE}}\"/" ./plugins/DiscordSRV/config.yml
         sed -i "s@DiscordInviteLink: \".*@DiscordInviteLink: \"{{DISCORDSRV_INVITE}}\"@" ./plugins/DiscordSRV/config.yml
     else
-        {{wrong_server_type()}}
+        @echo "Incorrect server type"
         @exit 1
     fi
 
@@ -85,7 +83,7 @@ purge-coreprotect-db BEFORE:
         screen -r {{screen_name}} -X stuff \
             "co purge t:{{BEFORE}}^M"
     else
-        {{wrong_server_type()}}
+        @echo "Incorrect server type"
         @exit 1
     fi
 # ifeq (${BEFORE},)

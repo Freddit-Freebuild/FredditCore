@@ -55,7 +55,7 @@ backup:
 # Start the Minecraft server in a screen session.
 start:
     screen -S {{screen_name}} -d -m \
-        bash ./start.sh {{server_name} {{MEM_MIN}}} {{MEM_MAX}} true
+        bash ./start.sh {{server_name}} {{MEM_MIN}} {{MEM_MAX}} true
         @echo "Starting {{server_name}}"
 
 # Stop the Minecraft server's screen session

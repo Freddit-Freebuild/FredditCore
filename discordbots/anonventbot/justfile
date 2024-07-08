@@ -4,6 +4,9 @@ set dotenv-load
 
 name := "anonventbot"
 
+default:
+    @just --list
+
 lock:
 	npm i --package-lock-only
 

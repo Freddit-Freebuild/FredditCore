@@ -7,12 +7,12 @@ server_type := "paper"
 
 screen_name := "minecraft-server" + server_name
 
-mem_min := $MEMORY_MIN
-mem_max := $MEMORY_MAX
-discordsrv_token 	:= $DISCORDSRV_TOKEN
-discordsrv_channel 	:= $DISCORDSRV_CHANNEL
-discordsrv_console 	:= $DISCORDSRV_CONSOLE_CHANNEL
-discordsrv_invite 	:= $DISCORDSRV_INVITE_LINK
+mem_min := {{MEMORY_MIN}}
+mem_max := {{MEMORY_MAX}}
+discordsrv_token 	:= {{DISCORDSRV_TOKEN}}
+discordsrv_channel 	:= {{DISCORDSRV_CHANNEL}}
+discordsrv_console 	:= {{DISCORDSRV_CONSOLE_CHANNEL}}
+discordsrv_invite 	:= {{DISCORDSRV_INVITE_LINK}}
 
 wrong_server_type := @echo "${server_name} is not a ${server_type} server. Skipping."
 

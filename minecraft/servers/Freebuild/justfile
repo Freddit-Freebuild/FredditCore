@@ -30,7 +30,7 @@ copy-shared-paper-jar:
 
 copy-shared-plugins-folder:
     if server_type == "paper"; then
-	    cp -rv ../shared/plugins .
+        cp -rv ../shared/plugins .
     else
         {{wrong_server_type()}}
         @exit 1

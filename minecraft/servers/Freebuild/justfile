@@ -56,7 +56,7 @@ prepare: copy-shared-paper-jar copy-shared-plugins-folder fix-discordsrv-config 
 
 # Perform a backup of the Minecraft server based on backuplist.txt. Optional parameter: SILENT=true/false
 backup:
-	screen -S minecraft-backup-${server_name} -d -m \
+    screen -S minecraft-backup-${server_name} -d -m \
         bash ${FREDDITCORE_DIR}/scripts/backup.sh ${FREDDITCORE_DIR}/minecraft/servers/${server_name} ${FREDDITCORE_DIR}/minecraft/backups/${server_name} ${SILENT}
 
 # Start the Minecraft server in a screen session.

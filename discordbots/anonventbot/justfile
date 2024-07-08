@@ -2,7 +2,7 @@
 
 set dotenv-load
 
-name := anonventbot
+name := "anonventbot"
 
 lock:
 	npm i --package-lock-only

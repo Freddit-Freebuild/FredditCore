@@ -61,13 +61,13 @@ backup:
 
 # Start the Minecraft server in a screen session.
 start:
-	screen -S ${screen_name} -d -m \
+    screen -S ${screen_name} -d -m \
         bash ./start.sh ${server_name} ${mem_min} ${mem_max} true
         @echo "Starting ${server_name}"
 
 # Stop the Minecraft server's screen session
 stop:
-	screen -X -S ${screen_name} quit
+    screen -X -S ${screen_name} quit
 
 # Execute a command from outside the Minecraft server, e.g. COMMAND="say hi" make command (requires server to be online)
 command COMMAND:

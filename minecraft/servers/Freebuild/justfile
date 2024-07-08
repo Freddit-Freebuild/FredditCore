@@ -22,7 +22,7 @@ default:
 # Copy the latest paper-*.jar file from servers/shared into the server folder as paper.jar
 copy-shared-paper-jar:
     if server_type == "paper"; then
-	    ls -t ../shared/paper_jars/paper-*.jar | head -n 1 | xargs -I {} cp -v {} ./paper.jar
+        ls -t ../shared/paper_jars/paper-*.jar | head -n 1 | xargs -I {} cp -v {} ./paper.jar
     else
         {{wrong_server_type()}}
         @exit 1

@@ -55,7 +55,7 @@ scoreboard-teams:
 playerlist-objective:
   enabled: false
   value: '%ping%'
-  fancy-value: '(%ping%)'
+  fancy-value: (%ping%)
   disable-condition: '%world%=disabledworld'
 belowname-objective:
   enabled: false

@@ -5,6 +5,7 @@
 !start.sh
 !start-autorestart.sh
 !bukkit.yml
+!commands.yml
 !server.properties
 !server-icon.png
 !eula.txt

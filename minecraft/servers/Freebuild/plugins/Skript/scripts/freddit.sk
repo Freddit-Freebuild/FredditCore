@@ -1,0 +1,9 @@
+command /fredditfreebuild:
+    executable by: players
+    trigger:
+        transfer player to play.freddit.net
+
+command /fredditsurvival:
+    executable by: players
+    trigger:
+        transfer player to survival.freddit.net

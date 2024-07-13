@@ -16,7 +16,7 @@ Once you've downloaded GitHub Desktop, sign into your GitHub account (after maki
 
 Now that you have a local copy, you can use any text editor of your choice to edit config files and such. I recommend either [Notepad++](https://notepad-plus-plus.org/) or [Visual Studio Code](https://code.visualstudio.com/).
 
-After editing files & saving, you should see your changes in the left pane of GitHub desktop. 
+After editing files & saving, you should see your changes in the left pane of GitHub desktop. Commit changes to the bottom left (after submitting a Summary, if there are more than 2 changed files), then click on "Push origin" to the top. 
 
 Remember to click on "Fetch origin" before 
 

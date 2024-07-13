@@ -1,9 +1,10 @@
 *
 !.gitignore
-!ChatReaction/
-!CustomHeads/
-!Essentials/
-!LPC/
-!PrefiX/
-!ServerlistMOTD/
-!TAB/
+!ChatReaction
+!CustomHeads
+!Essentials
+!LPC
+!PrefiX
+!ServerlistMOTD
+!Skript
+!TAB

@@ -1,9 +1,9 @@
 command /fredditfreebuild:
     executable by: players
     trigger:
-        transfer player to play.freddit.net
+        execute console command "/transfer survival.freddit.net 25665 %player%"
 
 command /fredditsurvival:
     executable by: players
     trigger:
-        transfer player to survival.freddit.net
+        execute console command "/transfer play.freddit.net 25565 %player%"

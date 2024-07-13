@@ -1,0 +1,4 @@
+command /fredditfreebuild:
+    executable by: players
+    trigger:
+        execute console command "/transfer play.freddit.net 25565 %player%"

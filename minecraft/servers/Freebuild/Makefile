@@ -1,21 +1,19 @@
 include ../../../Makefile-help
 include ../../../.config/.env-minecraft
-export
 
 server_name = Freebuild
 server_type = paper
 
-screen_name = minecraft-server-${server_name}
-
 include ../../../.config/.env-minecraft-${server_name}
-export
 
-mem_min = ${MEMORY_MIN}
-mem_max = ${MEMORY_MAX}
-discordsrv_token 	= ${DISCORDSRV_TOKEN}
-discordsrv_channel 	= ${DISCORDSRV_CHANNEL}
-discordsrv_console 	= ${DISCORDSRV_CONSOLE_CHANNEL}
-discordsrv_invite 	= ${DISCORDSRV_INVITE_LINK}
+ifeq (${MEMORY_MIN},)
+	MEMORY_MIN = 4G
+endif
+ifeq (${MEMORY_MAX},)
+	MEMORY_MAX = 4G
+endif
+
+screen_name = minecraft-${server_name}
 
 wrong_server_type := @echo "${server_name} is not a ${server_type} server. Skipping."
 
@@ -28,48 +26,34 @@ else
 	@exit 1
 endif
 
-.PHONY: copy-shared-plugins-folder
-copy-shared-plugins-folder:
-ifeq (${server_type},paper)
-	cp -rv ../shared/plugins .
-else
-	${wrong_server_type}
-	@exit 1
-endif
-
-.PHONY: fix-discordsrv-config
-fix-discordsrv-config: # Replace fields from the DiscordSRV config with values from .config/.env-minecraft
-ifeq (${server_type},paper)
-	sed -i "s/BotToken: \".*/BotToken: \"${discordsrv_token}\"/" ./plugins/DiscordSRV/config.yml
-	sed -i "s/Channels: {\"global\": \".*/Channels: {\"global\": \"${discordsrv_channel}\"}/" ./plugins/DiscordSRV/config.yml
-	sed -i "s/DiscordConsoleChannelId: \".*/DiscordConsoleChannelId: \"${discordsrv_console}\"/" ./plugins/DiscordSRV/config.yml
-	sed -i "s@DiscordInviteLink: \".*@DiscordInviteLink: \"${discordsrv_inite}\"@" ./plugins/DiscordSRV/config.yml
-else
-	${wrong_server_type}
-	@exit 1
-endif
-
 .PHONY: sessionlock-clean
 sessionlock-clean: # Remove session.lock files from the worlds (in case of failed server shutdown)
 	find . -name "session.lock" -delete -not -path "./plugins/*"
 
-.PHONY: prepare
-prepare: copy-shared-paper-jar copy-shared-plugins-folder fix-discordsrv-config sessionlock-clean
-
 .PHONY: backup
 backup: # Perform a backup of the Minecraft server based on backuplist.txt. Optional parameter: SILENT=true/false
-	screen -S minecraft-backup-${server_name} -d -m \
+	screen -S backup-${server_name} -d -m \
 		bash ${FREDDITCORE_DIR}/scripts/backup.sh ${FREDDITCORE_DIR}/minecraft/servers/${server_name} ${FREDDITCORE_DIR}/minecraft/backups/${server_name} ${SILENT}
 
 .PHONY: start
 start: # Start the Minecraft server in a screen session.
 	screen -S ${screen_name} -d -m \
-		bash ./start.sh ${server_name} ${mem_min} ${mem_max} true
+		bash ./start.sh ${server_name} ${MEMORY_MIN} ${MEMORY_MAX} true
 		@echo "Starting ${server_name}"
 
 .PHONY: stop
 stop: # Stop the Minecraft server's screen session
 	screen -X -S ${screen_name} quit
+
+.PHONY: restart
+restart: # Restart the Minecraft server
+	screen -r ${screen_name} -X stuff \
+		"stop^M"
+
+.PHONY: restart-hard
+restart-hard: # Restart the Minecraft server's screen session
+	@make stop
+	@make start
 
 .PHONY: command
 command: # Execute a command from outside the Minecraft server, e.g. COMMAND="say hi" make command (requires server to be online)

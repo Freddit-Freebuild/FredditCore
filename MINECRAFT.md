@@ -8,7 +8,7 @@
 - Server port: `25565` (Minecraft default)
 - Minecraft version: `1.20.4` / `1.20.6` (Rebuild)
 - Paper version: `1.20.4-409` / `1.20.6-148` (Rebuild)
-- Hosted on: `Contabo VPS` / `Hetzner Dedicated Server` (Rebuild)
+- Hosted on: `Hetzner Dedicated Server` (Rebuild)
 
 ## Plugins
 
@@ -22,7 +22,7 @@ When updating server plugins, make sure to note **A)** the latest version of the
 | [Citizens 2](https://ci.citizensnpcs.co/job/citizens2/)          |   `1.20.6` |       `2.0.35-b3473 ` |       |
 | [CoreProtect](https://www.spigotmc.org/resources/8631/)          |   `1.20.6` |                `2.22` |       |
 | [DiscordSRV](https://www.spigotmc.org/resources/18494/)          |   `1.20.6` |              `1.27.0` |       |
-| [Dynmap](https://www.spigotmc.org/resources/274/)                | ⚠️`1.20.4` |      `3.7-beta-4-935` |       |
+| [Dynmap](https://www.spigotmc.org/resources/274/)                |   `1.20.6` |    `3.7-SNAPSHOT-948` |  (1)  |
 | [EpicRename](https://www.spigotmc.org/resources/4341/)           |   `1.20.6` |                `3.12` |       |
 | [EssentialsX](https://www.spigotmc.org/resources/9089/)          |   `1.20.6` |          `2.21.0-dev` |       |
 | [EssentialsXChat](https://www.spigotmc.org/resources/9089/)      |   `1.20.6` |          `2.21.0-dev` |       |
@@ -32,19 +32,21 @@ When updating server plugins, make sure to note **A)** the latest version of the
 | [goBrush](https://www.spigotmc.org/resources/23118/)             |   `1.20.6` |            `3.8.0-79` |       |
 | [GSit](https://www.spigotmc.org/resources/62325/)                |   `1.20.6` |               `1.9.5` |       |
 | [ImageFrame](https://www.spigotmc.org/resources/106031/)         |   `1.20.6` |               `1.7.9` |       |
-| [LPC](https://www.spigotmc.org/resources/68965/)                 |   `1.20.6` |               `3.6.0` |  (1)  |
+| [LPC](https://www.spigotmc.org/resources/68965/)                 |   `1.20.6` |               `3.6.0` |  (2)  |
 | [MyWorlds](https://www.spigotmc.org/resources/39594/)            |   `1.20.6` |      `v1.20.6-v1-294` |       |
-| [PlaceholderAPI](https://www.spigotmc.org/resources/6245/)       |   `1.20.6` |              `2.11.6` |  (2)  |
+| [PlaceholderAPI](https://www.spigotmc.org/resources/6245/)       |   `1.20.6` |              `2.11.6` |  (3)  |
 | [PrefiX](https://www.spigotmc.org/resources/70359/)              |   `1.20.6` |                 `7.2` |       |
 | [PsudoCommands](https://www.spigotmc.org/resources/83535/)       | ⚠️`1.20.4` |              `1.0.35` |       |
 | [ServerlistMOTD](https://dev.bukkit.org/projects/serverlistmotd) |  *`1.20.6` |       `vX-2021-11-23` |       |
 | [ShulkerPacks](https://www.spigotmc.org/resources/67466/)        |   `1.20.6` |               `1.6.4` |       |
-| [Skript](https://www.spigotmc.org/resources/skript.114544/)      | ⚠️`1.20.4` |               `2.8.5` |       |
+| [Skript](https://www.spigotmc.org/resources/skript.114544/)      |   `1.20.6` |               `2.8.7` |  (4)  |
 | [TAB](https://www.spigotmc.org/resources/57806/)                 |   `1.20.6` |               `4.1.6` |       |
 | [WorldGuard](https://enginehub.org/worldguard)                   |   `1.20.6` |              `7.0.10` |       |
 
-**(1)**: **LPC**: Luckperms Chat Formatting  
-**(2)**: **PlaceholderAPI**: If names show up as `%essentials_nickname%` in chat, make sure the Essentials placeholder addon is installed (`/papi ecloud download Essentials`)
+**(1)**: **Dynmap**: Writes map files to `/var/www/map.freddit.net` (https://map.freddit.net)
+**(2)**: **LPC**: Luckperms Chat Formatting  
+**(3)**: **PlaceholderAPI**: If names show up as `%essentials_nickname%` in chat, make sure the Essentials placeholder addon is installed (`/papi ecloud download Essentials`)
+**(4)**: **Skript**: Used for `/fredditsurvival`
 
 # Survival
 
@@ -77,9 +79,11 @@ When updating server plugins, make sure to note **A)** the latest version of the
 | [ProtocolLib](https://www.spigotmc.org/resources/1997/)        |   `1.20.6` | `5.3.0-SNAPSHOT-723` |      `1.21` support     |
 | [RHEasyCrops](https://www.spigotmc.org/resources/86956/)       |   `1.20.6` |            `1.20_R5` |      `1.21` support     |
 | [ShulkerPacks](https://www.spigotmc.org/resources/67466/)      |   `1.20.6` |              `1.6.4` |      `1.21` support     |
+| [Skript](https://www.spigotmc.org/resources/skript.114544/)    |   `1.20.6` |              `2.8.7` |           (4)           |
 | [Stress](https://www.spigotmc.org/resources/79374/)            |   `1.20.6` |              `1.0.3` |                         |
 | [TAB](https://www.spigotmc.org/resources/57806/)               |   `1.20.6` |              `4.1.6` |      `1.21` support     |
 
 **(1)**: **LPC**: Luckperms Chat Formatting  
 **(2)**: **PlaceholderAPI**: If names show up as `%essentials_nickname%` in chat, make sure the Essentials placeholder addon is installed (`/papi ecloud download Essentials`)  
-**(3)**: **Pl3xMap**: Writes map files to `var/www/survivalmap.freddit.net`
+**(3)**: **Pl3xMap**: Writes map files to `var/www/survivalmap.freddit.net` (https://survivalmap.freddit.net)
+**(4)**: **Skript**: Used for `/fredditfreebuild`

@@ -25,4 +25,4 @@ group-formats:
 #  default: "[default] &r{prefix}&r%essentials_nickname%&r: {message}"
 #  admin: "[admin] &r{prefix}&r%essentials_nickname%&r: {message}"
   default: "&r{prefix}&r%essentials_nickname%&r: {message}"
-  
+  staff: "&r{prefix}&r%essentials_nickname%&r: {message}"

@@ -41,7 +41,7 @@ nick-blacklist:
 
 # When this option is enabled, nickname length checking will exclude color codes in player names.
 # ie: "&6Notch" has 7 characters (2 are part of a color code), a length of 5 is used when this option is set to true
-ignore-colors-in-max-nick-length: false
+ignore-colors-in-max-nick-length: true
 
 # When this option is enabled, display names for hidden users will not be shown. This prevents players from being
 # able to see that they are online while vanished.

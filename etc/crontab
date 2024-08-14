@@ -1,6 +1,6 @@
-0 6     * * 1       bash $(pwd)/FredditCore/scripts/make_minecraft_servers.sh backup
-0 12    * * 1       bash $(pwd)/FredditCore/scripts/restart_minecraft_servers.sh
-0 12    * * *       bash $(pwd)/FredditCore/scripts/server_status_to_webhook.sh
-0 0     * * 7       BEFORE=60d make -C $(pwd)/FredditCore/minecraft/servers/Freebuild purge-coreprotect-db
-0 0     * * 7       BEFORE=30d make -C $(pwd)/FredditCore/minecraft/servers/Survival purge-coreprotect-db
-@reboot make -C $(pwd)/FredditCore start-minecraft-servers
+0 6     * * 1       bash /home/$(whoami)/freddit/scripts/make_minecraft_servers.sh backup
+0 12    * * 1       bash /home/$(whoami)/freddit/scripts/restart_minecraft_servers.sh
+0 12    * * *       bash /home/$(whoami)/freddit/scripts/server_status_to_webhook.sh
+0 0     * * 7       BEFORE=60d make -C /home/$(whoami)/freddit/minecraft/servers/Freebuild purge-coreprotect-db
+0 0     * * 7       BEFORE=30d make -C /home/$(whoami)/freddit/minecraft/servers/Survival purge-coreprotect-db
+@reboot             make -C /home/$(whoami)/freddit start-minecraft-servers

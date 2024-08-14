@@ -1,8 +1,7 @@
-include ../../../Makefile-help
 include ../../../.config/.env-minecraft
 
 server_name = Freebuild
-server_type = paper
+screen_name = minecraft-${server_name}
 
 include ../../../.config/.env-minecraft-${server_name}
 
@@ -13,18 +12,11 @@ ifeq (${MEMORY_MAX},)
 	MEMORY_MAX = 4G
 endif
 
-screen_name = minecraft-${server_name}
-
-wrong_server_type := @echo "${server_name} is not a ${server_type} server. Skipping."
+include ../../../Makefile-help
 
 .PHONY: copy-shared-paper-jar
 copy-shared-paper-jar: # Copy the latest paper-*.jar file from servers/shared into the server folder as paper.jar
-ifeq (${server_type},paper)
 	ls -t ../shared/paper_jars/paper-*.jar | head -n 1 | xargs -I {} cp -v {} ./paper.jar
-else
-	${wrong_server_type}
-	@exit 1
-endif
 
 .PHONY: sessionlock-clean
 sessionlock-clean: # Remove session.lock files from the worlds (in case of failed server shutdown)
@@ -74,10 +66,5 @@ ifeq (${BEFORE},)
 	@echo "missing BEFORE parameter (e.g., 'BEFORE=60d make purge-coreprotect-db' to purge data older than 60 days)"
 	@exit 1
 endif
-ifeq (${server_type},paper)
 	screen -r ${screen_name} -X stuff \
 		"co purge t:${BEFORE}^M"
-else
-	${wrong_server_type}
-	@exit 1
-endif

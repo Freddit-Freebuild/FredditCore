@@ -1,6 +1,6 @@
-include ./Makefile-help
 include .config/.env
-export
+
+include ./Makefile-help
 
 .PHONY: start-minecraft-backups
 start-minecraft-backups: # Backup all Minecraft servers

@@ -6,8 +6,8 @@
 # Freebuild
 
 - Server port: `25565` (Minecraft default)
-- Minecraft version: `1.21`
-- Paper version: `1.21-119`
+- Minecraft version: `1.21.3`
+- Paper version: `1.21.3-65`
 - Hosted on: `Hetzner Dedicated Server`
 
 ## Plugins
@@ -19,10 +19,10 @@ When updating server plugins, make sure to note **A)** the latest version of the
 | [BannerMaker](https://www.spigotmc.org/resources/4380/)          |     `1.21` |               `2.4.0` |       |
 | [BKCommonLib](https://www.spigotmc.org/resources/39590/)         |     `1.21` |     `v1.20.6-v1-1749` |       |
 | [ChatReaction](https://www.spigotmc.org/resources/3748/)         |     `1.21` |               `1.8.0` |       |
-| [Citizens 2](https://ci.citizensnpcs.co/job/citizens2/)          |     `1.21` |       `2.0.35-b3473 ` |       |
+| [Citizens 2](https://ci.citizensnpcs.co/job/citizens2/)          |     `1.21` |       `2.0.36-b3637 ` |       |
 | [CoreProtect](https://www.spigotmc.org/resources/8631/)          |     `1.21` |                `2.22` |       |
-| [DiscordSRV](https://www.spigotmc.org/resources/18494/)          |     `1.21` |              `1.27.0` |       |
-| [Dynmap](https://www.spigotmc.org/resources/274/)                |     `1.21` |    `3.7-SNAPSHOT-948` |  (1)  |
+| [DiscordSRV](https://www.spigotmc.org/resources/18494/)          |     `1.21` |              `1.29.0` |       |
+| [Dynmap](https://www.spigotmc.org/resources/274/)                |     `1.21` |          `3.7-beta-7` |  (1)  |
 | [EpicRename](https://www.spigotmc.org/resources/4341/)           |     `1.21` |                `3.12` |       |
 | [EssentialsX](https://www.spigotmc.org/resources/9089/)          |     `1.21` |          `2.21.0-dev` |       |
 | [EssentialsXChat](https://www.spigotmc.org/resources/9089/)      |     `1.21` |          `2.21.0-dev` |       |
@@ -30,7 +30,7 @@ When updating server plugins, make sure to note **A)** the latest version of the
 | [EssentialsXSpawn](https://www.spigotmc.org/resources/9089/)     |     `1.21` |          `2.21.0-dev` |       |
 | [FastAsyncWorldEdit](https://www.spigotmc.org/resources/13932/)  |     `1.21` | `2.11.1-SNAPSHOT-831` |       |
 | [goBrush](https://www.spigotmc.org/resources/23118/)             |     `1.21` |            `3.8.0-79` |       |
-| [GSit](https://www.spigotmc.org/resources/62325/)                |     `1.21` |               `1.9.5` |       |
+| [GSit](https://www.spigotmc.org/resources/62325/)                |     `1.21` |              `1.11.2` |       |
 | [ImageFrame](https://www.spigotmc.org/resources/106031/)         |     `1.21` |               `1.7.9` |       |
 | [LPC](https://www.spigotmc.org/resources/68965/)                 |     `1.21` |               `3.6.0` |  (2)  |
 | [MyWorlds](https://www.spigotmc.org/resources/39594/)            |     `1.21` |      `v1.20.6-v1-294` |       |

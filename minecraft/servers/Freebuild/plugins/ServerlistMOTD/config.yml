@@ -18,9 +18,9 @@ ClassicMotd:
 RandomMotd:
   Enable: true
   Regulars:
-  # 2K25 MOTDs
+# 2K25 MOTDs
     - '&6&lFreddit Freebuild %line%&fTen years and running!'
-  # Classic MOTDS
+# Classic MOTDS
     - '&6&lFreddit Freebuild %line%&3Now without lag spikes'
     - '&6&lFreddit Freebuild %line%&3Also contains the Wall!'
     - '&6&lFreddit Freebuild %line%&edante is egg'

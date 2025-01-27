@@ -18,9 +18,9 @@ ClassicMotd:
 RandomMotd:
   Enable: true
   Regulars:
-# 2K25 MOTDs
+    # 2k25 MOTDs
     - '&6&lFreddit Freebuild %line%&fTen years and running!'
-# Classic MOTDS
+    # Classic MOTDs
     - '&6&lFreddit Freebuild %line%&3Now without lag spikes'
     - '&6&lFreddit Freebuild %line%&3Also contains the Wall!'
     - '&6&lFreddit Freebuild %line%&edante is egg'
@@ -332,7 +332,7 @@ RandomMotd:
     - '&6&lFreddit Freebuild %line%&eNEP STOP MY FRICKIN MEM IS WATCHING THE GOSH
       DARN SCREEN'
     - '&6&lFreddit Freebuild %line%&eOh, brother.'
-    - '&6&lFreddit Freebuild %line%&edo I HAVE to pay to use minecraft?'d'
+    - '&6&lFreddit Freebuild %line%&edo I HAVE to pay to use minecraft?'
     - '&6&lFreddit Freebuild %line%&eTHE SERVER ROOM IS ON FIRE! <fire emoji>'
     - '&6&lFreddit Freebuild %line%&ewhy isnt piss yellow a minecraft color'
     - '&6&lFreddit Freebuild %line%&ehey buddy we need to ask you questions'
